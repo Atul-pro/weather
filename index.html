@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <div class="fullcont">
+  
   <div class="topcont">
 
   <div class="tadcont">
@@ -18,74 +18,96 @@
     <div class="datee" id="date">
       
     </div>
-    <div class="place-container">
-    <div class="time-zone" id="time-zone"><span id="sex">Delhi</span> </div>
-    <div id="country" class="country"><span id="lelo"></span></div>
-  </div>
+    <div class="time-zone" id="time-zone"><span id="loca">Delhi<span id="lelo"></span></span></div>
+
   </div>
 
   <div class="container-fluid1">
     <section class="main">
       <section class="inputs">
-        <input type="text" placeholder="Enter any city..." id="ans">
-        <br><br>
-        
+        <input type="text" name="" placeholder="Search Place" id="ans">
         <button class="button2" style="vertical-align:middle" id="fuck" onclick="getinfo()"><span>At This Location</span></button>
 
     </section>
   </div>
   
 </div>
-<br>
 
-<input style="opacity: 0; cursor: pointer;" type="submit" value="Submit" id="add">
+
+
+<div><div style ="margin-left: 7px; width: 60%;" class="day"><div class="newhead"><span id="day1"></span></div></div></div>
+<div class="today" id="current-temp">
+<div class="presentd">
+
+  <div class="weather-forecast-item1">
+    
+    <div class="temp" style="margin-top: 14px;">Temp : <span id="te"></span></div>
+    <p id="img1">
+    <div class="temp">Min  : <span id="min1"></span></div>
+    <div class="temp">Max  : <span id="max1"></span></div>
+</div>
 
   
-      
-  <span style="opacity: 0;" id="day5min"></span>
-  <span style="opacity: 0;" id="day5max"></span>
+  <div class="others" id="current-weather-items">
+      <div class="properties">
+          <div>Wind Speed : <span id="wind"></span></div>
+      </div>
+      <div class="properties">
+          <div>Humidity : <span id="humi"></span></div>
+      </div>
+      <div class="properties">
+          <div>Pressure : <span id="pres"></span></div>
+      </div>
+  </div>
+</div>
 
+<div class="forecast">
 
-  <div class="weather-forecast" id="weather-forecast">
-    <div class="weather-forecast-item">
-      <div class="day"><span id="day1"></span></div>
-      <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" style="width: 50%; margin-bottom: -10px;">
-      <div class="temp"><span id="te"></span></div>
-      <div class="temp">Min : <span id="min1"></span></div>
-      <div class="temp">Max : <span id="max1"></span></div>
-    </div>
-    <div class="weather-forecast-item">
-      <div class="day"><span id="day2"></span></div>
-      <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" style="width: 50%; margin-bottom: -10px;">
-      <div class="temp">Min : <span id="day1min"></div>
-      <div class="temp">Max : <span id="day1max"></div>
-    </div>
-    <div class="weather-forecast-item">
-      <div class="day"><span id="day3"></span></div>
-      <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" style="width: 50%; margin-bottom: -10px;">
-      <div class="temp">Min  : <span id="day2min"></div>
-      <div class="temp">Max  : <span id="day2max"></span></div>
-    </div>
-    <div class="weather-forecast-item">
-      <div class="day"><span id="day4"></span></div>
-      <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" style="width: 50%; margin-bottom: -10px;">
-      <div class="temp">Min  : <span id="day3min"></span></div>
-      <div class="temp">Max  : <span id="day3max"></span></div>
-    </div>
-    <div class="weather-forecast-item">
-      <div class="day"><span id="day5"></span></div>
-      <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" style="width: 50%; margin-bottom: -10px;">
-      <div class="temp">Min  :  <span id="day4min"></span></div>
-      <div class="temp">Max  : <span id="day4max"></span></div>
-    </div>
-    
+    <div class="weather-forecast" id="weather-forecast">
       
-    
-    
+      <div class="weather-forecast-item">
+          <div class="day"><span id="day2"></span></div>
+          <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Weather-icon" class="w-icon" id="img2">
+          <div class="temp">Min  : <span id="day1min"></span></div>
+          <div class="temp">Max  : <span id="day1max"></span></div>
+      </div>
+      <div class="weather-forecast-item">
+          <div class="day"><span id="day3"></span></div>
+          <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Weather-icon" class="w-icon" id="img3">
+          <div class="temp">Min  : <span id="day2min"></span></div>
+          <div class="temp">Max  : <span id="day2max"></span></div>
+      </div>
+  
+  
+      <div class="weather-forecast-item">
+          <div class="day"><span id="day4"></span></div>
+          <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Weather-icon" class="w-icon" id="img4">
+          <div class="temp">Min  : <span id="day3min"></span></div>
+          <div class="temp">Max  : <span id="day3max"></span></div>
+      </div>
+      <div class="weather-forecast-item">
+          <div class="day"><span id="day5"></span></div>
+          <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Weather-icon" class="w-icon" id="img5">
+          <div class="temp">Min  :  <span id="day4min"></span></div>
+          <div class="temp">Max  : <span id="day4max"></span></div>
+      </div>
+      
+  
+  
+      <div class="weather-forecast-item">
+          <div class="day"><span id="day6"></span></div>
+          <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Weather-icon" class="w-icon" id="img6">
+          <div class="temp">Min  : <span id="day5min"></span></div>
+          <div class="temp">Max  : <span id="day5max"></span></div>
+      </div>
+  
+  
+      
+  
   </div>
 
 
-
+</div>
 
 
   
