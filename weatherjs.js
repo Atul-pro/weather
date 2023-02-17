@@ -1,42 +1,15 @@
-var inputval = document.querySelector('#cityinput')
-var btn = document.querySelector('#add');
-var city = document.querySelector('#cityoutput')
-var descrip = document.querySelector('#description')
-var temp = document.querySelector('#temp')
-var wind = document.querySelector('#wind')
-const timeEl = document.getElementById('time');
-const dateEl = document.getElementById('date');
 const weatherforecast1 = document.getElementById('weather-forecast');
+const date1 = document.getElementById('date');
+const currentweatheritems1 = document.getElementById("current-weather-items");
+const time1 = document.getElementById('time');
+const country1 = document.getElementById('country');
+const timezones = document.getElementById('time-zone');
+const currenttemp1 = document.getElementById('current-temp');
+
 
 apik = "3045dd712ffe6e702e3245525ac7fa38"
 const API_KEY = 'cbc8c0e52e5ad58fe47e98269835e538'
 
-function convertion(val)
-{
-    return (val - 273).toFixed(2)
-}
-
-btn.addEventListener('click', function()
-{
-  fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputval.value+'&appid='+apik)
-  .then(res => res.json())
-
-
-  .then(data => 
-  {
-    var nameval = data['name']
-    var descrip = data['weather']['0']['description']
-    var tempature = data['main']['temp']
-    var wndspd = data['wind']['speed']
-    city.innerHTML=`Weather of <span>${nameval}<span>`
-    temp.innerHTML = `Temperature: <span>${ convertion(tempature)} C</span>`
-    description.innerHTML = `Sky Conditions: <span>${descrip}<span>`
-    wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`
-
-  })
-
-  .catch(err => alert('You entered Wrong city name'))
-})
 
 
 // New JS starts -----------------
@@ -47,16 +20,17 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 
 setInterval(() => {
   const time = new Date();
-  const month = time.getMonth();
-  const date = time.getDate();
-  const day = time.getDay();
-  const hour = time.getHours();
-  const minute = time.getMinutes();
+    const month = time.getMonth();
+    const date = time.getDate();
+    const day = time.getDay();
+    const hour = time.getHours();
+    const hours2 = hour >=13 ? hour %12: hour
+    const minutes = time.getMinutes();
+    const ampm = hour >=12 ? 'PM' : 'AM'
+    
+    time1.innerHTML = (hours2 <10? '0' + hours2 :hours2) + ':' + (minutes < 10? '0' +minutes : minutes) 
 
-  timeEl.innerHTML = hour + ':' + minute;
-
-  dateEl.innerHTML = days[day] + ', ' + date+ ' ' + months[month]
-
+    date1.innerHTML = days[day] + ', ' + date+ ' ' + months[month]
 
 },1000);
 
@@ -73,7 +47,7 @@ input.addEventListener("keypress", function(event) {
 
 function getinfo(){
     var city=document.getElementById("ans").value;
-fetch('https://api.openweathermap.org/data/2.5/forecast?q='+city+'&units=metric&appid=404876b6b74fa78626ae9ee072d36f8a')
+fetch('https://api.openweathermap.org/data/2.5/forecast?q='+city+'&units=metric&appid=cbc8c0e52e5ad58fe47e98269835e538')
 .then(response=>response.json())
 .then(data=>{
     for(i=0;i<5;i++){
@@ -94,13 +68,13 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q='+city+'&units=metric&
     document.getElementById("te").innerHTML=Number(data.list[0].main.temp)+"°C"
     document.getElementById("min1").innerHTML=Number(data.list[0].main.temp_min)+"°C"
     document.getElementById("max1").innerHTML=Number(data.list[0].main.temp_max)+"°C"
-    document.getElementById("sex").innerHTML=city;
+    document.getElementById("loca").innerHTML=city;
     document.getElementById("lelo").innerHTML=data.city.country;
 })
 
 }
 
-fetch('https://api.openweathermap.org/data/2.5/forecast?q=delhi&units=metric&appid=404876b6b74fa78626ae9ee072d36f8a')
+fetch('https://api.openweathermap.org/data/2.5/forecast?q=delhi&units=metric&appid=cbc8c0e52e5ad58fe47e98269835e538')
 .then(response=>response.json())
 .then(data=>{
     for(i=0;i<5;i++){
@@ -142,3 +116,6 @@ function CheckDay(day){
     for(i = 0; i<6; i++){
         document.getElementById("day" + (i+1)).innerHTML = weekday[CheckDay(i)];
     }
+
+
+  
