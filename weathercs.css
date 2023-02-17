@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-image: url("back.jpg"); 
+    background-size: 100% 700px;
+    background-repeat: no-repeat;
+}
+
+.fullcont{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/*--------------------------------------*/
+@media (min-width: 769px){
+.container-fluid1
+{
+    width: 40%;
+    margin-left: auto; 
+    margin-right: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+
+}}
+
+@media (max-width: 768px) {
+
+    .topcont{
+    display: flex;
+}
+
+.tadcont{
+    width: 30%;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 45px;
+    color: white;
+    margin: 60px 0 0 30px;
+}
+
+
+    .container-fluid1 
+{
+    width: 35%;
+    position: right;
+    margin-left: auto; 
+    margin-right: 0;
+    margin-top: 60px;
+    margin-right: 10px;
+
+}
+
+.inputs 
+{
+    padding: 2rem 0 2rem 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    background: rgba(24,24,27,0.6);
+    border-radius: 25px;
+}
+.inputs input[type="text"] 
+{
+    height: 4rem;
+    width: 80%;
+    font-family: 'Trebuchet MS', sans-serif;
+    background: #212121;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #c2c2c2;
+    border-radius: 2px;
+    
+}
+
+#cityinput::placeholder {
+    font-size: 15px;
+    color: rgb(228, 228, 228);
+  }
+
+.inputs input[type="submit"] 
+{
+  background-color: #dadada;
+  font-family: 'Trebuchet MS', sans-serif;
+  display: inline-block;
+  border-radius: 8px;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 80%;
+  transition: all 0.5s;
+  cursor: pointer;
+  
+}
+.inputs input[type="submit"]:hover {
+    background-color: #b9b9b9;
+}
+
+/*button*/
+.button2 {
+    background-color: #dadada;
+    font-family: 'Trebuchet MS', sans-serif;
+  display: inline-block;
+  border-radius: 8px;
+  
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 80%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 10px 0px 0 0;
+}
+.button2:hover {
+    background-color: #b9b9b9;
+}
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*button ends-------------------------------------------------------------*/
+/* bottom starts------------------*/
+
+.weather-forecast{
+    position: fixed;
+    bottom: 0;
+    width: 98%;
+    height: 35%;
+    margin: 0 10px 10px 7px;
+    padding: 0 0 0 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background: rgba(24,24,27,0.6);
+    border-radius: 5px;
+    
+}
+
+.weather-forecast-item{
+    margin: 20px 7px 0 0;
+    height: 80%;
+    width: 18.5%;
+    font-family: 'Trebuchet MS', sans-serif;
+    background: #363636;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+    border: none;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    text-align: center;
+}
+.day{
+    margin-left: 15px;
+    font-size: 22px;
+    background-color: rgb(56, 56, 56);
+    width: 70%;
+}
+
+}
+
+
+
+
+
+
+
+
+/*
+.container-fluid2
+{
+    width: 600px;
+    margin: 20px 10px 20px;
+    padding: 10px;
+    
+}
+
+
+.inputs1
+{   width: 400px;
+    margin: 20px 10px 20px;
+    padding: 10px;
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+    justify-content: center;
+    background: rgba(24,24,27,0.6);
+    border-radius: 25px;
+}
+
+
+
+.display 
+{
+    text-align: center;
+    width: 400px;
+    background-color: #b9b9b9;
+}
+.wrapper 
+{
+    margin: 0 9rem;
+    background: rgba(24,24,27,0.6);
+    border-radius: 25px;
+    height: 45vh;
+    margin: 50px auto;
+    border-radius: 2px;
+}
+
+.wrapper h2
+{
+    padding: 5px 0;
+    text-align: center;
+    background: rgba(24,24,27,0.6);
+    border-radius: 25px;
+    color: white;
+    font-family: sans-serif;
+}
+.wrapper p
+{
+    margin:20px 50px;
+    margin-right: 20px;
+    text-align: left;
+    color: #04214c;
+    font-size:23px;
+}
+.wrapper h2 span
+{
+    font-size: 26px;
+    color: #9beefb;
+}
+.wrapper p span
+{
+    color: #f4780d;
+    font-size: 25px;
+}
+*/
